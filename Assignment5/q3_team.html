@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Team Members</title>
+  <style>
+    /* 3-column team layout, responsive to single column under 600px */
+    body{font-family:Arial;margin:0;padding:2rem;background:#f3f6f9}
+    .team{display:flex;gap:1rem;justify-content:space-between}
+    .card{flex:1;background:#fff;padding:1.25rem;border-radius:8px;border:1px solid #e1e8f0;box-shadow:0 6px 12px rgba(0,0,0,0.06)}
+    .lead{background:#eaf6ff;border:2px solid #1b9af7}
+    h3{margin-top:0}
+    @media(max-width:600px){.team{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <h1>Our Team</h1>
+  <div class="team">
+    <div class="card lead">
+      <h3>Alex Kumar</h3>
+      <p><em>Team Lead</em></p>
+      <p>Leads the dev team and oversees project delivery.</p>
+    </div>
+    <div class="card">
+      <h3>Priya Singh</h3>
+      <p><em>Frontend Developer</em></p>
+      <p>Designs UI and implements responsive interfaces.</p>
+    </div>
+    <div class="card">
+      <h3>Rahul Verma</h3>
+      <p><em>Backend Developer</em></p>
+      <p>Builds APIs and manages databases.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+  <style>
+    /* Centered contact form with focus styles and consistent theme */
+    html,body{height:100%;margin:0}
+    body{display:flex;align-items:center;justify-content:center;font-family:Arial;background:#eef3f8}
+    .form-wrap{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 8px 24px rgba(2,6,23,0.08);width:90%;max-width:480px}
+    label{display:block;margin-bottom:0.25rem;font-weight:600}
+    input,textarea{width:100%;padding:0.6rem;border-radius:6px;border:1px solid #d1d9e6;margin-bottom:1rem;transition:border-color 0.2s,box-shadow 0.2s}
+    input:focus,textarea:focus{outline:none;border-color:#0b63d6;box-shadow:0 0 0 3px rgba(11,99,214,0.08)}
+    button{background:#0b63d6;color:#fff;padding:0.6rem 1rem;border:none;border-radius:6px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="form-wrap">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input id="name" name="name" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>

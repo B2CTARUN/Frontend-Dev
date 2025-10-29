@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pricing Plans</title>
+  <style>
+    /* Pricing table: 3 equal columns with hover effects and transitions */
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:2rem;background:#f5f7fb}
+    .plans{display:flex;gap:1rem;align-items:stretch}
+    .plan{flex:1;background:#fff;padding:1.5rem;border-radius:8px;border:1px solid #e2e8f0;display:flex;flex-direction:column;justify-content:space-between;transition:transform 0.25s ease,background 0.25s ease;box-shadow:0 6px 12px rgba(2,6,23,0.06)}
+    .plan:hover{transform:scale(1.04);background:#f0f9ff}
+    .plan h2{margin:0 0 0.5rem 0}
+    .features{list-style:disc inside;margin:0 0 1rem 0;padding:0}
+    .price{font-size:2rem;font-weight:700;margin:1rem 0}
+    .btn{display:inline-block;padding:0.6rem 1rem;border-radius:6px;background:#0b63d6;color:#fff;text-decoration:none}
+    .popular{border:2px solid #ffb86b;background:#fff7ed}
+    /* equal height ensured by align-items:stretch and flex layout */
+    @media(max-width:800px){.plans{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <h1>Choose a Plan</h1>
+  <div class="plans">
+    <div class="plan">
+      <div>
+        <h2>Basic</h2>
+        <ul class="features">
+          <li>Feature A</li>
+          <li>Feature B</li>
+        </ul>
+      </div>
+      <div>
+        <div class="price">$9</div>
+        <a class="btn" href="#">Select</a>
+      </div>
+    </div>
+    <div class="plan popular">
+      <div>
+        <h2>Standard</h2>
+        <ul class="features">
+          <li>Feature A</li>
+          <li>Feature B</li>
+          <li>Feature C</li>
+        </ul>
+      </div>
+      <div>
+        <div class="price">$19</div>
+        <a class="btn" href="#">Select</a>
+      </div>
+    </div>
+    <div class="plan">
+      <div>
+        <h2>Premium</h2>
+        <ul class="features">
+          <li>Everything in Standard</li>
+          <li>Priority Support</li>
+        </ul>
+      </div>
+      <div>
+        <div class="price">$29</div>
+        <a class="btn" href="#">Select</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <style>
+    /* Dashboard: fixed header, left sidebar, responsive stacking */
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial;background:#f5f7fb}
+    header{position:fixed;top:0;left:0;right:0;height:56px;background:#0b3d91;color:#fff;display:flex;align-items:center;padding:0 1rem;z-index:10}
+    .layout{display:flex;padding-top:56px;min-height:calc(100vh - 56px)}
+    aside{width:220px;background:#12213b;color:#fff;padding:1rem;height:calc(100vh - 56px);position:sticky;top:56px}
+    main{flex:1;padding:1.5rem}
+    .box{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 6px 12px rgba(2,6,23,0.06);margin-bottom:1rem}
+    @media(max-width:800px){aside{width:100%;height:auto;position:relative} .layout{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header><h1 style="font-size:1rem;margin:0">Dashboard</h1></header>
+  <div class="layout">
+    <aside>
+      <nav>
+        <p>Navigation</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li>Overview</li>
+          <li>Reports</li>
+          <li>Settings</li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <div class="box"><h2>Content Box 1</h2><p>Summary and metrics go here.</p></div>
+      <div class="box"><h2>Content Box 2</h2><p>More details and charts.</p></div>
+    </main>
+  </div>
+</body>
+</html>

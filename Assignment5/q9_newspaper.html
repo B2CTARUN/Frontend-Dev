@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Magazine Layout</title>
+  <style>
+    /* Newspaper-style multi-column layout using column-count */
+    body{font-family:Georgia,serif;background:#f7f6f3;padding:2rem}
+    .content{background:#fff;padding:2rem;column-count:3;column-gap:2rem;max-width:1000px;margin:0 auto}
+    h1{column-span:all;text-align:center;margin-top:0}
+    img.float-left{float:left;margin:0 1rem 1rem 0;width:180px}
+    p{text-align:justify}
+    @media(max-width:900px){.content{column-count:2}}
+    @media(max-width:600px){.content{column-count:1}img.float-left{float:none;display:block;margin:0 auto 1rem auto}}
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Weekend Magazine</h1>
+    <img class="float-left" src="https://via.placeholder.com/180x120" alt="">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
+    <p>Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit sed sem ultrices, vitae convallis lorem dapibus. Suspendisse potenti.</p>
+    <p>Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod.</p>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+  </div>
+</body>
+</html>

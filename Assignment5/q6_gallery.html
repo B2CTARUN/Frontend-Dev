@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Photo Gallery</title>
+  <style>
+    /* CSS-only responsive gallery with hover scale and caption overlay */
+    body{font-family:Arial;margin:0;padding:2rem;background:#f4f6f8}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+    .item{position:relative;overflow:hidden;border-radius:8px}
+    .item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.3s ease}
+    .item:hover img{transform:scale(1.08)}
+    .caption{position:absolute;left:0;right:0;bottom:0;padding:0.6rem 0;background:rgba(0,0,0,0.5);color:#fff;text-align:center;opacity:0;transition:opacity 0.25s}
+    .item:hover .caption{opacity:1}
+  </style>
+</head>
+<body>
+  <h1>Gallery</h1>
+  <div class="gallery">
+    <div class="item"><img src="https://via.placeholder.com/400x300" alt=""><div class="caption">Caption 1</div></div>
+    <div class="item"><img src="https://via.placeholder.com/400x300" alt=""><div class="caption">Caption 2</div></div>
+    <div class="item"><img src="https://via.placeholder.com/400x300" alt=""><div class="caption">Caption 3</div></div>
+    <div class="item"><img src="https://via.placeholder.com/400x300" alt=""><div class="caption">Caption 4</div></div>
+    <div class="item"><img src="https://via.placeholder.com/400x300" alt=""><div class="caption">Caption 5</div></div>
+    <div class="item"><img src="https://via.placeholder.com/400x300" alt=""><div class="caption">Caption 6</div></div>
+  </div>
+</body>
+</html>

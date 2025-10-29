@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Complete Layout Demo</title>
+  <style>
+    /* Demonstrate box model, positioning, flex/grid, rgba and gradients */
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial;background:linear-gradient(180deg,#f8fafc,#eef2f7);color:#102a43}
+    header{position:sticky;top:0;background:rgba(11,61,145,0.95);color:#fff;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+    nav a{color:#fff;margin-left:1rem;text-decoration:none}
+    .hero{height:60vh;background-image:url('https://via.placeholder.com/1200x600');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;position:relative}
+    .hero .welcome{background:rgba(0,0,0,0.45);color:#fff;padding:2rem;border-radius:8px;text-align:center}
+    .container{width:90%;max-width:1100px;margin:2rem auto}
+    .about{display:flex;gap:2rem;align-items:center}
+    .about img{width:40%;border-radius:8px}
+    .services{display:flex;gap:1rem;margin-top:1rem}
+    .service{flex:1;padding:1rem;background:#fff;border:1px solid #e6eef9;border-radius:8px;box-shadow:0 6px 12px rgba(2,6,23,0.06)}
+    .contact{margin-top:1.5rem;padding:1rem;background:#fff;border-radius:8px}
+    footer{background:#071029;color:#fff;padding:1rem;text-align:center;margin-top:2rem}
+    /* Box model examples */
+    .box-demo{border:4px solid rgba(11,61,145,0.2);padding:1rem;margin:1rem 0}
+    /* Positioning examples */
+    .relative-box{position:relative}
+    .absolute-badge{position:absolute;top:-20px;right:20px;background:#ffb86b;padding:0.4rem 0.8rem;border-radius:20px}
+    @media(max-width:800px){.about{flex-direction:column}.about img{width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Site Name</strong></div>
+    <nav><a href="#">Home</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+  <section class="hero">
+    <div class="welcome">
+      <h1>Welcome</h1>
+      <p>Center text over hero using positioning and flexbox.</p>
+    </div>
+  </section>
+  <main class="container">
+    <section class="about box-demo relative-box">
+      <div class="absolute-badge">New</div>
+      <img src="https://via.placeholder.com/400x300" alt="About image">
+      <div>
+        <h2>About Us</h2>
+        <p>Short about paragraph demonstrating padding, margin and border.</p>
+      </div>
+    </section>
+    <section class="services">
+      <div class="service"><h3>Service A</h3><p>Details about service A.</p></div>
+      <div class="service"><h3>Service B</h3><p>Details about service B.</p></div>
+      <div class="service"><h3>Service C</h3><p>Details about service C.</p></div>
+    </section>
+    <section class="contact">
+      <h2>Contact</h2>
+      <form>
+        <label>Name<br><input type="text" style="width:100%;padding:0.6rem;margin-top:0.4rem"></label>
+        <label>Email<br><input type="email" style="width:100%;padding:0.6rem;margin-top:0.4rem"></label>
+        <button type="submit" style="margin-top:1rem;padding:0.6rem 1rem;background:#0b63d6;color:#fff;border:none;border-radius:6px">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Company Name
+  </footer>
+</body>
+</html>

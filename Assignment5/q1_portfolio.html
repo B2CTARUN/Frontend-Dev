@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio - Tarun Chandwani</title>
+  <style>
+    /* Fixed header, footer at bottom using flexbox, different units used (px, em, %, vh, rem) */
+    :root{--header-h:60px;--accent:#0b3d91;--bg:#f4f7fb;--text:#102a43}
+    html,body{height:100%;margin:0}
+    body{display:flex;flex-direction:column;min-height:100vh;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+    header{position:fixed;top:0;left:0;width:100%;height:var(--header-h);background:var(--accent);color:#fff;display:flex;align-items:center;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+    .container{width:90%;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+    header nav a{color:#fff;text-decoration:none;margin-left:1.5rem;font-size:1rem}
+    main{flex:1 0 auto;margin-top:var(--header-h);display:flex;align-items:center;justify-content:center;padding:3vh 0}
+    .card{background:#fff;padding:2rem;border-radius:12px;display:flex;gap:1.5rem;align-items:center;max-width:900px;width:90%;box-shadow:0 6px 18px rgba(16,42,67,0.08)}
+    .profile{width:8rem;height:8rem;border-radius:50%;background:#ddd;flex:0 0 auto}
+    .bio p{font-size:1rem;line-height:1.6rem;margin:0 0 1rem 0}
+    .skills{list-style:disc inside;margin:0;padding:0;font-size:0.95rem}
+    footer{background:rgba(16,42,67,0.9);color:#fff;padding:1rem 0;text-align:center;flex-shrink:0}
+    /* responsive */
+    @media(max-width:600px){.card{flex-direction:column;text-align:center}.profile{width:120px;height:120px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 style="font-size:1.2rem;margin:0">Tarun Chandwani</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="card">
+      <div class="profile" aria-hidden="true"></div>
+      <div class="bio">
+        <p><strong>Hi, I'm Tarun Chandwani.</strong> I work with Java, Python, Machine Learning, Web Development and Full Stack. I specialize in Deployment, DevOps and Cloud Computing.</p>
+        <ul class="skills">
+          <li>Java</li>
+          <li>Python</li>
+          <li>Machine Learning</li>
+          <li>Web Development</li>
+          <li>Full Stack</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <small>&copy; 2025 Tarun Chandwani</small>
+  </footer>
+</body>
+</html>
