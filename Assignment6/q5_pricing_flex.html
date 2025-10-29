@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pricing (Flexbox)</title>
+  <style>
+    /* Three pricing cards horizontally; middle highlighted and slightly larger; fade-in animation */
+    @keyframes fadeIn {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    body{margin:0;font-family:Arial;background:#f4f6f8;padding:2rem}
+    .wrap{display:flex;gap:1rem;align-items:stretch;animation:fadeIn 0.8s ease both}
+    .card{flex:1;background:#fff;padding:1.5rem;border-radius:8px;text-align:center;transition:transform 0.3s,box-shadow 0.3s}
+    .card:hover{transform:translateY(-10px);box-shadow:0 12px 24px rgba(2,6,23,0.12)}
+    .card.middle{flex:1.2;background:#fff6e8;border:1px solid #ffd59a}
+    .price{font-size:2rem;font-weight:700;margin:1rem 0}
+    @media(max-width:750px){.wrap{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <h1>Pricing Plans</h1>
+  <div class="wrap">
+    <div class="card">
+      <h2>Basic</h2>
+      <div class="price">$9</div>
+    </div>
+    <div class="card middle">
+      <h2>Standard</h2>
+      <div class="price">$19</div>
+    </div>
+    <div class="card">
+      <h2>Premium</h2>
+      <div class="price">$29</div>
+    </div>
+  </div>
+</body>
+</html>

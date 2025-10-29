@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blog Layout (Grid)</title>
+  <style>
+    /* Grid layout with areas: header, sidebar, main, footer; responsive below 800px */
+    body{margin:0;font-family:Arial;background:#f7f9fc}
+    .site{display:grid;grid-template-columns:250px 1fr;grid-template-rows:auto 1fr auto;grid-template-areas:"header header" "sidebar main" "footer footer";gap:1rem;min-height:100vh}
+    header{grid-area:header;padding:1rem;background:#0b3d91;color:#fff}
+    aside{grid-area:sidebar;padding:1rem;background:#fff;border-radius:8px}
+    main{grid-area:main;padding:1rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .post{background:#fff;padding:1rem;border-radius:8px}
+    footer{grid-area:footer;padding:1rem;text-align:center}
+    @media(max-width:800px){.site{grid-template-columns:1fr;grid-template-areas:"header" "main" "sidebar" "footer"} main{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header><h1 style="margin:0">My Blog</h1></header>
+    <aside>
+      <h3>Categories</h3>
+      <ul style="list-style:none;padding:0;margin:0"><li>Web</li><li>ML</li><li>DevOps</li></ul>
+    </aside>
+    <main>
+      <article class="post"><h2>Post 1</h2><p>Summary of post 1.</p></article>
+      <article class="post"><h2>Post 2</h2><p>Summary of post 2.</p></article>
+    </main>
+    <footer>Contact: info@example.com</footer>
+  </div>
+</body>
+</html>

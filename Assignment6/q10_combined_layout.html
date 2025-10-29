@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Combined Layout</title>
+  <style>
+    /* Header flex, main 2-column grid, article with 3 flex boxes, animated title */
+    body{margin:0;font-family:Arial;background:#f7fafc}
+    header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:#0b3d91;color:#fff}
+    nav a{color:#fff;margin-left:1rem;text-decoration:none}
+    .main{display:grid;grid-template-columns:2fr 1fr;gap:1rem;padding:2rem}
+    .article{background:#fff;padding:1rem;border-radius:8px}
+    .sidebar{background:#fff;padding:1rem;border-radius:8px;height:max-content}
+    .article .boxes{display:flex;gap:1rem;margin-top:1rem}
+    .boxes .box{flex:1;background:#f1f5f9;padding:1rem;border-radius:6px}
+    footer{text-align:center;padding:1rem;background:#071029;color:#fff}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    .title{animation:fadeUp 0.8s ease both}
+    @media(max-width:800px){.main{grid-template-columns:1fr;}.sidebar{order:2}}
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Logo</strong></div>
+    <nav><a href="#">Home</a><a href="#">Blog</a><a href="#">Contact</a></nav>
+  </header>
+  <main class="main">
+    <article class="article">
+      <h1 class="title">Article Title</h1>
+      <p>Intro paragraph for the article content.</p>
+      <div class="boxes">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+    </article>
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Links and info here.</p>
+    </aside>
+  </main>
+  <footer>&copy; 2025 Company</footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Product Gallery Grid</title>
+  <style>
+    /* 4-column grid of 8 product cards; responsive to 2 and 1 columns */
+    body{margin:0;font-family:Arial;background:#f4f6f8;padding:2rem}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .card{background:#fff;padding:1rem;border-radius:8px;display:flex;flex-direction:column;justify-content:space-between;transition:transform 0.3s;box-shadow:0 6px 12px rgba(2,6,23,0.06)}
+    .card:hover{transform:scale(1.05)}
+    .card h3{margin:0 0 0.5rem 0}
+    .price{font-weight:700;color:#0b63d6}
+    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:500px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <h1>Products</h1>
+  <div class="grid">
+    <div class="card"><h3>Product 1</h3><div class="price">$10</div></div>
+    <div class="card"><h3>Product 2</h3><div class="price">$20</div></div>
+    <div class="card"><h3>Product 3</h3><div class="price">$30</div></div>
+    <div class="card"><h3>Product 4</h3><div class="price">$40</div></div>
+    <div class="card"><h3>Product 5</h3><div class="price">$50</div></div>
+    <div class="card"><h3>Product 6</h3><div class="price">$60</div></div>
+    <div class="card"><h3>Product 7</h3><div class="price">$70</div></div>
+    <div class="card"><h3>Product 8</h3><div class="price">$80</div></div>
+  </div>
+</body>
+</html>
