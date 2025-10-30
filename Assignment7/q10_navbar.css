@@ -1,0 +1,22 @@
+/* q10_navbar.css
+   Horizontal nav with smooth hover transitions and active link highlighting.
+   Responsive: stacks vertically below 700px. */
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial;background:#fff;color:#071029}
+.nav-wrap{background:#0b63d6;color:#fff}
+.navbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 1rem;max-width:1200px;margin:0 auto}
+.brand{font-weight:800;color:#fff;text-decoration:none}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:0.5rem}
+.nav-list a{display:block;padding:0.6rem 0.9rem;border-radius:6px;color:#fff;text-decoration:none;transition:all 0.3s ease}
+.nav-list a:hover{background:rgba(255,255,255,0.08);transform:translateY(-3px)}
+.nav-list a.active{background:#fff;color:#0b63d6;font-weight:700}
+
+.hero{padding:3rem 1rem;text-align:center}
+.site-footer{text-align:center;padding:0.75rem;background:#071029;color:#fff}
+
+@media(max-width:700px){
+  .navbar{flex-direction:column;align-items:stretch}
+  .nav-list{flex-direction:column}
+  .nav-list a{width:100%}
+}

@@ -1,0 +1,20 @@
+/* q9_outline_focus.css
+   Demonstrates outline styles and outline-offset on focus for inputs and textarea.
+   Provides padding, border-radius and subtle shadows for neat appearance. */
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial;background:#f8fafc;color:#071029;display:flex;align-items:center;justify-content:center;height:100vh}
+.form-card{background:#fff;padding:1.25rem;border-radius:12px;box-shadow:0 14px 32px rgba(2,6,23,0.08);width:95%;max-width:520px}
+form{display:flex;flex-direction:column;gap:0.75rem}
+label{display:flex;flex-direction:column;font-weight:600}
+input,textarea{padding:0.6rem;border-radius:8px;border:1px solid #e6eef9}
+
+/* Outline examples: different styles demonstrated in CSS below */
+input:focus,textarea:focus{outline:3px solid rgba(11,99,214,0.18);outline-offset:4px}
+
+button{padding:0.6rem 0.9rem;border-radius:8px;border:0;background:#0b63d6;color:#fff;cursor:pointer}
+button.muted{background:#eef2ff;color:#0b3d91}
+
+.controls{display:flex;gap:0.5rem;justify-content:flex-end}
+
+@media(max-width:480px){.controls{flex-direction:column;align-items:stretch}}

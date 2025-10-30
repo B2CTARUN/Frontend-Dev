@@ -1,0 +1,25 @@
+/* q4_shadows_depth.css
+   Cards with varying box-shadows and text-shadow for headings.
+   Flexbox used to place cards in a single row and wrap on small screens. */
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial;background:#f8fafc;color:#071029;padding:1rem}
+header{padding:0 0 1rem}
+.lead{color:#334155}
+.cards{display:flex;gap:1rem;align-items:stretch;justify-content:center}
+.card{flex:1 1 220px;background:#fff;padding:1rem;border-radius:12px;transition:box-shadow 0.25s ease,transform 0.18s;text-align:center}
+.card h2{margin:0 0 0.5rem;text-shadow:1px 1px 2px rgba(0,0,0,0.08)}
+.card p{margin:0;color:#334155}
+
+/* different shadow levels */
+.soft{box-shadow:0 6px 16px rgba(2,6,23,0.06)}
+.medium{box-shadow:0 12px 30px rgba(2,6,23,0.09)}
+.strong{box-shadow:0 18px 50px rgba(2,6,23,0.12)}
+
+/* hover lifts the card */
+.card:hover{transform:translateY(-8px)}
+.card:hover{box-shadow:0 28px 70px rgba(2,6,23,0.18)}
+
+@media(max-width:800px){
+  .cards{flex-direction:column}
+}

@@ -1,0 +1,31 @@
+/* q1_borders_padding.css
+   Demonstrates borders, border-radius and padding examples.
+   Layout: Flexbox aligns boxes horizontally and wraps on smaller screens. */
+
+:root{--bg:#f7fbff;--card:#fff;--accent:#0b63d6}
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:#05243a}
+header{padding:1.25rem 1rem}
+header .lead{color:#334155;margin:0 0 1rem}
+
+.container{display:flex;gap:1rem;padding:1rem;align-items:flex-start;flex-wrap:wrap}
+.box{background:var(--card);padding:12px;border-radius:10px;min-width:200px;flex:1 1 220px;box-shadow:0 8px 20px rgba(2,6,23,0.06);transition:border-color 0.25s ease}
+.box h2{margin:0 0 0.5rem;font-size:1.05rem}
+.box p{margin:0;color:#334155}
+
+/* Border styles */
+.solid{border:3px solid #0b63d6}
+.dashed{border:3px dashed #0b63d6}
+.double{border:6px double #0b63d6}
+.groove{border:4px groove #0b63d6}
+
+/* rounded corners examples (demonstrated in markup) */
+.double{border-radius:6px}
+.groove{border-radius:14px}
+
+/* different padding values already set in markup descriptions; show hover effect */
+.box:hover{border-color:#a5173f}
+
+@media(max-width:700px){
+  .container{flex-direction:column}
+}
