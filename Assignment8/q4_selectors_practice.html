@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Selectors Practice</title>
+<style>
+  
+  body{font-family:Arial;margin:2rem;background:#fff;color:#102a43}
+  header,footer{margin-bottom:1rem}
+  main{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+ 
+  p{line-height:1.5}
+
+  
+  .highlight{background:#fff4d6;padding:0.5rem;border-radius:6px}
+
+ 
+  #unique{border-left:4px solid #0b63d6;padding-left:0.6rem}
+
+ 
+  input[placeholder]{padding:0.5rem;border-radius:6px;border:1px solid #ddd}
+
+  .parent > p{color:#0b3d91}
+
+  
+  h3 + p{font-style:italic}
+
+  
+  h4 ~ p{color:#334155}
+
+  @media(max-width:800px){main{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <header><h1>CSS Selectors Practice</h1></header>
+  <main>
+    <section>
+      <h2>Element selector</h2>
+      <p>This paragraph shows the element selector (p).</p>
+
+      <h2>Class selector</h2>
+      <p class="highlight">This paragraph uses a class selector (.highlight).</p>
+
+      <h2>ID selector</h2>
+      <p id="unique">This paragraph uses an id selector (#unique).</p>
+    </section>
+
+    <section>
+      <h2>Attribute selector</h2>
+      <input placeholder="Type here">
+
+      <h2>Combinators</h2>
+      <div class="parent">
+        <p>Direct child of .parent (child combinator)</p>
+        <div>
+          <p>Nested paragraph (not a direct child)</p>
+        </div>
+      </div>
+
+      <h3>Header</h3>
+      <p>Paragraph immediately after h3 (adjacent sibling +)</p>
+
+      <h4>Subheader</h4>
+      <p>First paragraph after h4 (general sibling ~)</p>
+      <p>Another paragraph after h4</p>
+    </section>
+  </main>
+  <footer>Use the CSS comments to explain each rule in a class discussion.</footer>
+</body>
+</html>

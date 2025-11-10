@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CSS Animations Demo</title>
+<style>
+  /* Three animated elements centered with flexbox; using @keyframes */
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f0f4f8;font-family:Arial}
+  .wrap{display:flex;gap:2rem;align-items:center}
+
+  /* moving box */
+  .move{width:80px;height:80px;background:#0b63d6;border-radius:8px;animation:slide 2s ease-in-out infinite alternate}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(20px)}}
+
+  /* bouncing ball */
+  .ball{width:60px;height:60px;border-radius:50%;background:#ffb86b;animation:bounce 1s cubic-bezier(.28,.84,.42,1) infinite}
+  @keyframes bounce{0%{transform:translateY(0)}50%{transform:translateY(-40px)}100%{transform:translateY(0)}}
+
+  /* color-changing text */
+  .text{font-weight:700;font-size:1.1rem;animation:colorchange 3s ease-in-out infinite alternate}
+  @keyframes colorchange{from{color:#0b63d6}to{color:#a5173f}}
+
+  /* small labels */
+  .col{display:flex;flex-direction:column;align-items:center;gap:0.5rem}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="col"><div class="move"></div><div>Moving Box</div></div>
+    <div class="col"><div class="ball"></div><div>Bouncing Ball</div></div>
+    <div class="col"><div class="text">Color Changing Text</div><div>Animated Title</div></div>
+  </div>
+</body>
+</html>

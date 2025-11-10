@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Box-sizing Comparison</title>
+<style>
+  
+  body{margin:0;font-family:Arial;background:#f7fafc;display:flex;align-items:center;justify-content:center;min-height:100vh}
+  .wrap{display:flex;gap:1rem;align-items:flex-start}
+  .box{width:260px;padding:20px;border:8px solid #0b63d6;background:#fff;border-radius:8px}
+  .label{font-weight:700;margin-bottom:0.5rem}
+  .explain{max-width:560px;margin-left:1rem;color:#334155}
+  
+  .content-box{box-sizing:content-box}
+  .border-box{box-sizing:border-box}
+  @media(max-width:800px){.wrap{flex-direction:column}.explain{margin-left:0}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <div class="label">content-box (default)</div>
+      <div class="box content-box">Box using default sizing. Padding and border add to total width.</div>
+    </div>
+    <div>
+      <div class="label">border-box</div>
+      <div class="box border-box">Box using border-box. Padding and border included in the specified width.</div>
+    </div>
+  </div>
+</body>
+</html>

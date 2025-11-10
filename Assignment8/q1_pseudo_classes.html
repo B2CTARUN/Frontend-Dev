@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pseudo-Classes Demo</title>
+<style>
+  :root{--bg:#f8fafc;--card:#fff;--accent:#0b63d6}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#0b2545;display:flex;align-items:center;justify-content:center;min-height:100vh}
+  .wrap{width:95%;max-width:1100px}
+  header{padding:1rem 0}
+  .examples{display:flex;gap:1rem;align-items:flex-start;justify-content:space-between}
+  .example{background:var(--card);padding:1rem;border-radius:8px;flex:1;min-width:180px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+
+  .link-demo a{display:inline-block;padding:0.5rem 0.75rem;border-radius:6px;text-decoration:none;background:#eef6ff;color:var(--accent);font-weight:700;transition:transform 0.15s}
+  .link-demo a:hover{background:#d7ecff;transform:translateY(-3px)}
+  .link-demo a:focus{outline:3px solid rgba(11,99,214,0.18)}
+
+  .btn-demo button{padding:0.6rem 1rem;border-radius:6px;border:0;background:var(--accent);color:#fff;font-weight:700;cursor:pointer;transition:transform 0.12s,box-shadow 0.12s}
+  .btn-demo button:active{transform:scale(0.98)}
+  .btn-demo button:focus{outline:3px solid rgba(11,99,214,0.18)}
+
+  .list-demo ul{list-style:none;padding:0;margin:0}
+  .list-demo li{padding:0.6rem;border-radius:6px;margin-bottom:0.4rem}
+  .list-demo li:nth-child(odd){background:#fff7f3}
+  .list-demo li:nth-child(even){background:#f3fbff}
+
+  @media(max-width:900px){.examples{flex-direction:column}}
+
+  .note{margin-top:0.5rem;font-size:0.9rem;color:#334155}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Pseudo-Classes Examples</h1>
+      <p class="note">This page demonstrates <code>:hover</code>, <code>:focus</code>, <code>:active</code> and <code>:nth-child()</code>.</p>
+    </header>
+    <div class="examples">
+      <section class="example link-demo" aria-labelledby="link-h">
+        <h2 id="link-h">Links (:hover, :focus)</h2>
+        <p><a href="#" tabindex="0">Hover / Focus me</a></p>
+        <p class="note">Hover changes background and moves link up; focus shows an outline for keyboard users.</p>
+      </section>
+
+      <section class="example btn-demo" aria-labelledby="btn-h">
+        <h2 id="btn-h">Buttons (:active, :focus)</h2>
+        <p><button type="button">Press Me</button></p>
+        <p class="note">Active (mouse press) slightly scales the button. Focus outlines for keyboard navigation.</p>
+      </section>
+
+      <section class="example list-demo" aria-labelledby="list-h">
+        <h2 id="list-h">List (:nth-child)</h2>
+        <ul>
+          <li>Item One</li>
+          <li>Item Two</li>
+          <li>Item Three</li>
+          <li>Item Four</li>
+          <li>Item Five</li>
+        </ul>
+        <p class="note">Alternate styling uses <code>:nth-child(odd)</code> and <code>:nth-child(even)</code>.</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

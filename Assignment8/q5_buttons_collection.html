@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Buttons Collection</title>
+<style>
+  /* Button styles: primary, secondary, outline, disabled; flexbox layout */
+  body{font-family:Arial;margin:2rem;background:#f9fafb;color:#102a43}
+  .row{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn{padding:0.6rem 1rem;border-radius:8px;border:0;font-weight:700;cursor:pointer;transition:transform 0.15s,box-shadow 0.15s}
+  .btn:focus{outline:3px solid rgba(11,99,214,0.15)}
+
+  /* primary */
+  .btn-primary{background:#0b63d6;color:#fff;box-shadow:0 8px 20px rgba(11,99,214,0.12)}
+  .btn-primary:hover{transform:translateY(-4px)}
+  .btn-primary:active{transform:translateY(-1px)}
+
+  /* secondary */
+  .btn-secondary{background:#e6f0ff;color:#0b3d91}
+
+  /* outline */
+  .btn-outline{background:transparent;border:2px solid #0b63d6;color:#0b63d6}
+
+  /* disabled */
+  .btn[disabled]{opacity:0.5;cursor:not-allowed;transform:none}
+
+  .note{margin-top:1rem;color:#475569}
+</style>
+</head>
+<body>
+  <h1>Button Styles</h1>
+  <div class="row">
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-outline">Outline</button>
+    <button class="btn btn-primary" disabled>Disabled</button>
+  </div>
+  <p class="note">Use Tab to focus buttons and observe <code>:focus</code>; use mouse press to see <code>:active</code>.</p>
+</body>
+</html>

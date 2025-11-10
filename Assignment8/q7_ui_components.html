@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UI Components</title>
+<style>
+  /* Card-like container with search, buttons, dropdown; Flexbox alignment */
+  body{margin:0;font-family:Inter,Arial;background:linear-gradient(180deg,#f8fafc,#eef2f7);display:flex;align-items:center;justify-content:center;height:100vh}
+  .card{background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,0.08);width:90%;max-width:560px}
+  .row{display:flex;gap:0.5rem}
+  input[type="search"]{flex:1;padding:0.6rem;border-radius:8px;border:1px solid #e6eef9}
+  select{padding:0.5rem;border-radius:8px;border:1px solid #e6eef9}
+  button{padding:0.5rem 0.8rem;border-radius:8px;border:0;background:#0b63d6;color:#fff;cursor:pointer}
+  input:focus,select:focus,button:focus{outline:3px solid rgba(11,99,214,0.12)}
+  .actions{display:flex;gap:0.5rem;justify-content:flex-end;margin-top:1rem}
+</style>
+</head>
+<body>
+  <div class="card">
+    <h2 style="margin:0 0 0.5rem 0">Search Players</h2>
+    <div class="row">
+      <input type="search" placeholder="Search by name">
+      <select aria-label="Filter">
+        <option>All</option>
+        <option>Forward</option>
+        <option>Midfield</option>
+      </select>
+    </div>
+    <div class="actions">
+      <button type="button">Search</button>
+      <button type="button" style="background:#e6f0ff;color:#0b3d91">Reset</button>
+    </div>
+  </div>
+</body>
+</html>

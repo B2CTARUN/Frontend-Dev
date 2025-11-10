@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CSS Tooltips Demo</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f3f6f9}
+  .wrap{display:flex;gap:1.25rem;align-items:center}
+  .item{position:relative;padding:0.5rem 1rem;border-radius:8px;background:#fff;border:1px solid #e6eef9}
+  .item:hover{cursor:pointer}
+  .item .tooltip{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(100% + 10px);background:#0b3d91;color:#fff;padding:0.5rem 0.75rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.3s ease-in-out}
+  .item:hover .tooltip,.item:focus-within .tooltip{opacity:1}
+  .item .tooltip::after{content:"";position:absolute;left:50%;transform:translateX(-50%);top:100%;border:6px solid transparent;border-top-color:#0b3d91}
+</style>
+</head>
+<body>
+  <div class="wrap" role="list">
+    <div class="item" tabindex="0" role="listitem" aria-label="Home">
+      Home
+      <div class="tooltip" role="tooltip">Go to homepage</div>
+    </div>
+    <div class="item" tabindex="0" role="listitem" aria-label="Players">
+      Players
+      <div class="tooltip" role="tooltip">View squad</div>
+    </div>
+    <div class="item" tabindex="0" role="listitem" aria-label="Tickets">
+      Tickets
+      <div class="tooltip" role="tooltip">Buy match tickets</div>
+    </div>
+  </div>
+</body>
+</html>

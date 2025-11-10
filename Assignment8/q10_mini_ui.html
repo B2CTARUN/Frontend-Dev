@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mini UI Layout</title>
+<style>
+ 
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,Arial;background:linear-gradient(180deg,#f8fafc,#eef2f7);display:flex;flex-direction:column;min-height:100vh}
+  header{background:#0b3d91;color:#fff;padding:1rem 1.25rem}
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:2rem}
+  .card{width:100%;max-width:720px;background:#fff;padding:1.25rem;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,0.08)}
+  .form-row{display:flex;gap:0.5rem}
+  input,button,select{padding:0.6rem;border-radius:8px;border:1px solid #e6eef9}
+  input:focus,select:focus,button:focus{outline:3px solid rgba(11,99,214,0.12)}
+  .btn{background:#0b63d6;color:#fff;border:0}
+  footer{background:#071029;color:#fff;text-align:center;padding:0.75rem}
+  @media(max-width:700px){.form-row{flex-direction:column}}
+</style>
+</head>
+<body>
+  <header><strong>Mini UI</strong></header>
+  <main>
+    <section class="card">
+      <h2>Contact Form</h2>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Your name" required style="flex:1">
+          <input type="email" placeholder="Email" required style="flex:1">
+        </div>
+        <div style="margin-top:0.75rem">
+          <input type="text" placeholder="Subject" style="width:100%">
+        </div>
+        <div style="margin-top:0.75rem;display:flex;gap:0.5rem;align-items:center">
+          <select aria-label="Reason">
+            <option>General</option>
+            <option>Support</option>
+          </select>
+          <button class="btn" type="submit">Send</button>
+        </div>
+      </form>
+      <p style="margin-top:1rem;color:#475569">This mini UI demonstrates consistent box-sizing, shadows, and focus styles.</p>
+    </section>
+  </main>
+  <footer>&copy; 2025</footer>
+</body>
+</html>
