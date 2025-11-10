@@ -1,0 +1,21 @@
+/* Q2: Responsive Web Design Layout using Flexbox
+   - Header: logo left, nav right
+   - Main: three feature boxes horizontal, stack below 750px
+*/
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial;margin:0;background:#fff;color:#071029}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;border-bottom:1px solid #eef2f7}
+.logo{font-weight:800}
+.nav{display:flex;gap:0.75rem}
+.nav a{text-decoration:none;color:#0b63d6;padding:0.4rem 0.6rem;border-radius:6px;transition:transform 180ms}
+.nav a:hover{transform:translateY(-3px)}
+
+.features{display:flex;gap:1rem;padding:1.25rem;justify-content:space-between}
+.feature{flex:1;background:#f8fafc;padding:1rem;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.05);transition:transform 180ms}
+.feature:hover{transform:scale(1.03)}
+
+.site-footer{text-align:center;padding:1rem;border-top:1px solid #eef2f7}
+
+@media(max-width:750px){
+  .features{flex-direction:column}
+}

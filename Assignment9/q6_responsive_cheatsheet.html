@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Q6 - Responsive CSS Cheat Sheet</title>
+  <style>
+    *{box-sizing:border-box}
+    body{font-family:Segoe UI,Arial;margin:0;background:#fff;color:#071029;padding:1rem}
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:1100px;margin:0 auto}
+    .term{background:#f8fafc;padding:1rem;border-radius:8px;box-shadow:0 10px 30px rgba(2,6,23,0.06);transition:transform 180ms}
+    .term h3{margin:0 0 0.5rem}
+    .term:hover{transform:translateY(-6px)}
+    @media(max-width:700px){
+      .grid{grid-template-columns:1fr}
+      .term{display:block}
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="grid">
+      <article class="term"><h3>Filters</h3><p>Use <code>filter:</code> for visual effects like blur, grayscale, sepia.</p></article>
+      <article class="term"><h3>Media Queries</h3><p><code>@media (max-width: 700px)</code> adjusts layout at breakpoints.</p></article>
+      <article class="term"><h3>Responsive Design</h3><p>Combine flexible layouts, media queries and relative units.</p></article>
+      <article class="term"><h3>Typography</h3><p>Use <code>clamp()</code> and relative units (rem, vw) to scale text.</p></article>
+    </section>
+  </main>
+</body>
+</html>

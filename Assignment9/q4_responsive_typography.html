@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Q4 - Responsive Typography</title>
+  <style>
+    /* Q4: Responsive Typography using clamp() */
+    *{box-sizing:border-box}
+    body{font-family:Georgia, 'Times New Roman', serif;margin:0;background:#fff;color:#071029;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:1rem}
+    .content{max-width:900px;text-align:center;padding:2rem}
+    h1{font-size:clamp(1.5rem,4vw,3rem);margin:0 0 1rem}
+    p{font-size:clamp(1rem,2vw,1.5rem);line-height:1.8;margin:0 0 1.25rem}
+    .container{padding:1rem}
+    @media(max-width:700px){
+      p{line-height:1.5}
+      .content{padding:1rem}
+    }
+  </style>
+</head>
+<body>
+  <main class="content">
+    <article>
+      <h1>Scaling Typography with clamp()</h1>
+      <p>This section demonstrates fluid typography. The heading and paragraph scale between sensible minimum and maximum sizes using <code>clamp()</code>. Resize the browser to see the effect and notice adjusted line-height below 700px for readability.</p>
+    </article>
+  </main>
+</body>
+</html>

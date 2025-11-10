@@ -1,0 +1,26 @@
+/* Q1: Responsive Image Filter Gallery
+   - Grid with auto-fit minmax
+   - Each image uses a different CSS filter; hover removes filter with transition
+*/
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial,sans-serif;margin:0;padding:1rem;background:#f8fafc;color:#071029}
+header{margin-bottom:1rem}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));align-items:start}
+figure{margin:0;background:#fff;padding:8px;border-radius:8px;box-shadow:0 8px 20px rgba(2,6,23,0.06);overflow:hidden}
+img{width:100%;height:auto;display:block;transition:filter 300ms ease,transform 300ms ease}
+figcaption{padding:0.5rem 0;text-align:center;color:#334155}
+
+/* Filters */
+.f-blur{filter:blur(3px)}
+.f-grayscale{filter:grayscale(100%)}
+.f-sepia{filter:sepia(70%)}
+.f-bright{filter:brightness(0.7)}
+.f-contrast{filter:contrast(0.6)}
+.f-hue{filter:hue-rotate(90deg)}
+
+/* remove filter on hover */
+figure:hover img{filter:none;transform:scale(1.02)}
+
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr}
+}

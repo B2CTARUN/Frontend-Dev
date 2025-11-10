@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Q9 - Responsive Design Principles Summary</title>
+  <style>
+    /* Q9: Grid with three boxes; hover gradient; stack below 600px */
+    *{box-sizing:border-box}
+    body{font-family:Segoe UI,Arial;margin:0;padding:1rem;background:#fff;color:#071029}
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(3,1fr);max-width:1000px;margin:0 auto}
+    .box{background:#f8fafc;padding:1rem;border-radius:8px;transition:background 220ms,color 220ms,transform 220ms}
+    .box:hover{background:linear-gradient(90deg,#0b63d6,#8b5cf6);color:#fff;transform:translateY(-6px)}
+    .code{display:block;padding:0.5rem;background:rgba(2,6,23,0.04);border-radius:6px;margin-top:0.5rem;font-family:monospace}
+    @media(max-width:600px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="grid">
+      <article class="box"><h3>Fluid Layouts</h3><p>Layouts that use percentages and flexible units to adapt to width.</p><pre class="code">.container{width:90%;max-width:1200px}</pre></article>
+      <article class="box"><h3>Flexible Media</h3><p>Images and video should use <code>max-width:100%</code> to prevent overflow.</p><pre class="code">img{max-width:100%;height:auto}</pre></article>
+      <article class="box"><h3>Breakpoints</h3><p>Choose breakpoints based on content, not device names.</p><pre class="code">@media(max-width:600px){...}</pre></article>
+    </section>
+  </main>
+</body>
+</html>

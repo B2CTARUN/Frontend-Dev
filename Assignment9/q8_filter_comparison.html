@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Q8 - Filter Comparison Layout</title>
+  <style>
+    /* Q8: before-and-after filter comparison */
+    *{box-sizing:border-box}
+    body{font-family:Segoe UI,Arial;margin:0;padding:1rem;background:#fff;color:#071029}
+    .wrap{max-width:1000px;margin:0 auto;display:flex;gap:1rem;align-items:flex-start}
+    .compare{flex:1;display:flex;gap:1rem}
+    .pane{flex:1;background:#f8fafc;padding:8px;border-radius:8px;text-align:center}
+    .pane img{width:100%;height:auto;border-radius:6px;transition:filter 300ms ease}
+    .pane.right img{filter:contrast(0.6) brightness(0.8)}
+  .pane.right:hover img{filter:none}
+
+    @media(max-width:700px){
+      .wrap{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="compare">
+      <figure class="pane left">
+        <img src="https://via.placeholder.com/600x360?text=Before" alt="before">
+        <figcaption>Before</figcaption>
+      </figure>
+      <figure class="pane right">
+        <img src="https://via.placeholder.com/600x360?text=After" alt="after">
+        <figcaption>After (filtered)</figcaption>
+      </figure>
+    </section>
+    <aside style="max-width:320px">
+      <p>Hover the filtered image to remove the effect (on small screens images stack).</p>
+    </aside>
+  </main>
+  <!-- No JavaScript: CSS hover removes the filter on the right pane -->
+</body>
+</html>

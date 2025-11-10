@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Q2 - Responsive Web Design Layout</title>
+  <style>
+ 
+  *{box-sizing:border-box}
+  body{font-family:Segoe UI,Arial;margin:0;background:#fff;color:#071029}
+  .site-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;border-bottom:1px solid #eef2f7}
+  .logo{font-weight:800}
+  .nav{display:flex;gap:0.75rem}
+  .nav a{text-decoration:none;color:#0b63d6;padding:0.4rem 0.6rem;border-radius:6px;transition:transform 180ms}
+  .nav a:hover{transform:translateY(-3px)}
+
+  .features{display:flex;gap:1rem;padding:1.25rem;justify-content:space-between}
+  .feature{flex:1;background:#f8fafc;padding:1rem;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.05);transition:transform 180ms}
+  .feature:hover{transform:scale(1.03)}
+
+  .site-footer{text-align:center;padding:1rem;border-top:1px solid #eef2f7}
+
+  @media(max-width:750px){
+    .features{flex-direction:column}
+  }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">MyLogo</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="features">
+      <article class="feature"> <h3>Feature A</h3><p>Short description</p></article>
+      <article class="feature"> <h3>Feature B</h3><p>Short description</p></article>
+      <article class="feature"> <h3>Feature C</h3><p>Short description</p></article>
+    </section>
+  </main>
+  <footer class="site-footer">&copy; 2025 Demo Footer</footer>
+</body>
+</html>

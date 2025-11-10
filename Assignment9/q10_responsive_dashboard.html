@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Q10 - Responsive Dashboard Summary</title>
+  <style>
+    /* Q10: Dashboard using CSS Grid
+       Header, Sidebar, Main Content with responsive reflow below 750px */
+    *{box-sizing:border-box}
+    body{font-family:Segoe UI,Arial;margin:0;background:#f7fbff;color:#071029}
+    .layout{display:grid;grid-template-columns:240px 1fr;grid-template-rows:64px 1fr;grid-template-areas:"sidebar header" "sidebar main";min-height:100vh}
+    header{grid-area:header;background:#0b63d6;color:#fff;padding:0.8rem 1rem;display:flex;align-items:center;justify-content:space-between}
+    aside{grid-area:sidebar;background:#fff;padding:1rem;border-right:1px solid #eef2f7}
+    main{grid-area:main;padding:1rem}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+    .card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 12px 30px rgba(2,6,23,0.06);transition:transform 180ms}
+    .card:hover{transform:translateY(-6px)}
+
+    /* load animation */
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .card{animation:fadeIn 480ms ease both}
+
+    @media(max-width:750px){
+      .layout{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"header" "sidebar" "main"}
+      aside{order:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <header>
+      <div class="brand">Dashboard</div>
+      <div class="user">Contact</div>
+    </header>
+    <aside>
+      <nav>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px">
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Filters</a></li>
+          <li><a href="#">Typography</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <section class="cards">
+        <article class="card"><h3>Filters</h3><p>Short example and link to cheat sheet.</p></article>
+        <article class="card"><h3>Typography</h3><p>Responsive fonts using clamp().</p></article>
+        <article class="card"><h3>Media Queries</h3><p>Breakpoints and responsive rules.</p></article>
+        <article class="card"><h3>Cheat Sheet</h3><p>Quick links and examples.</p></article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
