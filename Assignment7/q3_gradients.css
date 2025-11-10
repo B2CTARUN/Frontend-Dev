@@ -1,0 +1,21 @@
+/* q3_gradients.css
+   Two sections: linear and radial gradients. Header and footer fixed for layout.
+   One section uses background-attachment: fixed to create parallax-like effect. */
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial,Helvetica,sans-serif;color:#041f3b}
+.site-header{position:fixed;top:0;left:0;right:0;padding:0.75rem 1rem;background:rgba(255,255,255,0.9);backdrop-filter:blur(4px);z-index:10}
+.site-header h1{margin:0}
+
+main{padding-top:72px}
+section{min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;color:#fff}
+
+/* linear gradient section */
+.linear{background:linear-gradient(135deg,#0b63d6 0%,#a5173f 100%)}
+
+/* radial gradient with background-attachment fixed for parallax-like effect */
+.radial{background:radial-gradient(circle at 30% 30%,#ffd966 0%,#ff7aa2 40%,#7b6cff 100%);background-attachment:fixed}
+
+.site-footer{padding:0.8rem;text-align:center;background:#071029;color:#fff}
+
+@media(max-width:700px){section{padding:1.25rem;min-height:50vh}}

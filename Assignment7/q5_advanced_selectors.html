@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Advanced Selectors</title>
+  <link rel="stylesheet" href="q5_advanced_selectors.css">
+</head>
+<body>
+  <header><h1>Advanced CSS Selectors</h1></header>
+
+  <main>
+    <section>
+      <h2>Attribute Selectors</h2>
+      <input type="text" placeholder="type here">
+      <a href="https://example.com">Secure Link</a>
+      <a href="http://example.com">Insecure Link</a>
+    </section>
+
+    <section>
+      <h2>Pseudo-classes & Pseudo-elements</h2>
+      <ul class="demo-list">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Combinators</h2>
+      <div class="parent">
+        <p>Direct child styled by <code>&gt;</code></p>
+        <div>
+          <p>Nested paragraph (not a direct child)</p>
+        </div>
+      </div>
+      <h3>Heading</h3>
+      <p>Paragraph immediately after h3 (adjacent sibling)</p>
+    </section>
+  </main>
+
+  <footer>Check the CSS comments for an explanation of each selector rule.</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* q5_advanced_selectors.css
+   Demonstrates attribute selectors, pseudo-classes, pseudo-elements and combinators.
+
+   Comments explain each selector category directly above the rules. */
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial;background:#ffffff;color:#071029;padding:1rem}
+section{margin-bottom:1rem}
+
+/* Attribute selector: selects inputs that have a placeholder attribute */
+input[placeholder]{padding:0.5rem;border-radius:6px;border:1px solid #e6eef9}
+
+/* Attribute selector: selects links whose href starts with https (secure) */
+a[href^="https"]{color:#0b63d6;font-weight:700}
+
+a[href^="http"]{color:#334155}
+
+/* Pseudo-classes: hover and focus on links */
+a:hover{opacity:0.85}
+a:focus{outline:3px solid rgba(11,99,214,0.12)}
+
+/* nth-child: style alternate list items */
+.demo-list li{padding:0.5rem;border-radius:6px;margin-bottom:0.35rem}
+.demo-list li:nth-child(odd){background:#fff4d6}
+.demo-list li:nth-child(even){background:#e8f3ff}
+
+/* Pseudo-elements: add decorative dots before items */
+.demo-list li::before{content:"• ";color:#a5173f;font-weight:700}
+
+/* Combinators:
+   >  child combinator - styles direct children only
+   +  adjacent sibling - styles immediate following sibling
+   ~  general sibling - styles any following siblings
+*/
+.parent > p{color:#0b3d91}
+h3 + p{font-style:italic}
+
+@media(max-width:700px){body{padding:0.75rem}}

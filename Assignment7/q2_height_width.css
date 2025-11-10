@@ -1,0 +1,25 @@
+/* q2_height_width.css
+   Demonstrates different sizing units and min/max constraints.
+   Flexbox centers content horizontally and vertically. */
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial;background:#fbfdff;color:#05243a}
+header{padding:1rem}
+.stage{display:flex;gap:1rem;align-items:center;justify-content:center;padding:1rem;min-height:60vh}
+.box{background:#fff;padding:0.75rem;border:1px solid #e6eef9;border-radius:8px;box-shadow:0 8px 18px rgba(2,6,23,0.05);display:flex;flex-direction:column;align-items:center}
+.box p{margin:0 0 0.5rem}
+
+/* fixed px box */
+.small{width:200px;height:150px;background:#e8f3ff}
+
+/* percentage with min-height */
+.percent{width:50%;min-height:10vh;background:#fff3e6}
+
+/* vh height with overflow */
+.tall{width:220px;height:20vh;overflow:auto;background:#f0fff4}
+.tall .content{padding-top:0.5rem;color:#334155}
+
+@media(max-width:800px){
+  .stage{flex-direction:column}
+  .percent{width:90%}
+}

@@ -1,0 +1,24 @@
+/* q7_typography.css
+   Demonstrates font families, weights, sizes, line-height, letter-spacing.
+   Styles for <mark>, <strong>, <em> and pseudo-elements ::first-letter and ::first-line. */
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia, 'Times New Roman', serif;background:#fff9f5;color:#071029;padding:1rem}
+.container{max-width:720px;margin:0 auto}
+header h1{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin:0}
+.byline{color:#6b7280;margin:0 0 1rem}
+
+.lead{font-size:1.05rem;line-height:1.7;color:#334155}
+
+p{font-size:1rem;line-height:1.8;letter-spacing:0.2px;color:#102a43}
+
+/* styling semantic elements */
+mark{background:#fff3b0;color:#7b3f00;padding:0 0.15rem;border-radius:2px}
+strong{font-weight:700;color:#0b3d91}
+em{color:#a5173f}
+
+/* ::first-letter and ::first-line */
+section p::first-letter{font-size:2.2rem;font-weight:700;float:left;margin-right:6px;color:#a5173f}
+section p::first-line{font-variant:small-caps;letter-spacing:0.5px}
+
+@media(max-width:700px){.container{padding:0 0.75rem}}
